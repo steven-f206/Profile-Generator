@@ -4,26 +4,26 @@
     "description": "Generate a pdf profile from my github",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/steven-f206/Profile-Generator.git"
+        "type": "git",
+        "url": "git+https://github.com/steven-f206/Profile-Generator.git"
     },
     "keywords": [
-      "js",
-      "node"
+        "js",
+        "node"
     ],
     "author": "Steven Ferreira",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/steven-f206/Profile-Generator/issues"
+        "url": "https://github.com/steven-f206/Profile-Generator/issues"
     },
     "homepage": "https://github.com/steven-f206/Profile-Generator#readme",
     "dependencies": {
-      "axios": "^0.19.0",
-      "fs-extra": "^8.1.0",
-      "inquirer": "^7.0.0",
-      "puppeteer": "^2.0.0"
+        "axios": "^0.19.0",
+        "fs-extra": "^8.1.0",
+        "inquirer": "^7.0.0",
+        "puppeteer": "^2.0.0"
     }
-  }
+}

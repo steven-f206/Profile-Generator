@@ -1,29 +1,14 @@
-const puppeteer = require('puppeteer');
-const pdfContent = require('./generateHTML.js');
 const gitHubProfile = require('./gitHubProfile.js');
-const questions = require('./question.js');
+const colorQuestion = require('./colorQuestion.js/index.js');
+const createPdf = require('./createPdf');
 
-// Create PDF
-const createPdf = async (answers, gitHubInfo) => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  const options = {
-    path: 'pdf/StevenFerreiraGithubProfile.pdf',
-    format:'A4'
-};
-  await page.setContent(pdfContent.generateHTML(answers.color, gitHubInfo ));
-  await page.pdf(options);
-  await browser.close();
-}
-
-// Call data for PDF
+// Step 2. Used data passed to gitHubDataCall from the colorQuestion function to make a request to gitHubProfile.
+// From here it will pass it's own data to createPdf to fulfill it's step.
 let gitHubDataCall = (answers) => {
-  gitHubProfile.gitHubProfile(answers,createPdf);
+    gitHubProfile.gitHubProfile(answers,createPdf.createPdf);
 }
 
-questions.colorQuestion(gitHubDataCall);
-
-/*
-function init() {}
-init();
-*/
+function init() {
+    // Step 1. Make initial call for choice of color
+    colorQuestion.colorQuestion(gitHubDataCall);
+  }  
