@@ -9,6 +9,7 @@ async function gitHubProfile(answers, createPdf){
         followers: response1.data.followers,
         following: response1.data.following,
         bio: response1.data.bio,
+        html_url: response1.data.html_url,
         blog: response1.data.blog,
         location: response1.data.location,
         public_repos: response1.data.public_repos,
