@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
+const createPdf = require('./createPdf').createPdf;
+const gitHubProfile = require('./gitHubProfile.js').gitHubProfile;
 
-colorQuestion = (gitHubDataCall) => {
+colorQuestion = () => {
   inquirer
     .prompt([
       {
@@ -11,7 +13,9 @@ colorQuestion = (gitHubDataCall) => {
       }
     ])
     .then(answers => {
-      gitHubDataCall(answers);
+      // Step 2. Used data passed to gitHubDataCall from the colorQuestion function to make a request to gitHubProfile.
+      // From here it will pass it's own data to createPdf to fulfill it's step.
+      gitHubProfile(answers,createPdf);
   })
 }
 
