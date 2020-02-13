@@ -44,109 +44,109 @@ function generatePdfContent(data, gitHubInfo) {
             *,
             *::after,
             *::before {
-            box-sizing: border-box;
+                box-sizing: border-box;
             }
             html, body {
-            padding: 0;
-            margin: 0;
+                padding: 0;
+                margin: 0;
             }
             html, body, .wrapper {
-            height: 100%;
+                height: 100%;
             }
             .wrapper {
-            background-color: ${colors[data].wrapperBackground};
-            padding-top: 100px;
+                background-color: ${colors[data].wrapperBackground};
+                padding-top: 100px;
             }
             body {
-            background-color: white;
-            -webkit-print-color-adjust: exact !important;
-            font-family: 'Cabin', sans-serif;
+                background-color: white;
+                -webkit-print-color-adjust: exact !important;
+                font-family: 'Cabin', sans-serif;
             }
             main {
-            height: auto;
-            padding-top: 30px;
+                height: auto;
+                padding-top: 30px;
             }
             h1, h2, h3, h4, h5, h6 {
-            font-family: 'BioRhyme', serif;
-            margin: 0;
+                font-family: 'BioRhyme', serif;
+                margin: 0;
             }
             h1 {
-            font-size: 3em;
+                font-size: 3em;
             }
             h2 {
-            font-size: 2.5em;
+                font-size: 2.5em;
             }
             h3 {
-            font-size: 2em;
-            text-align:center;
+                font-size: 2em;
+                text-align:center;
             }
             h4 {
-            font-size: 1.5em;
-            text-align:center;
+                font-size: 1.5em;
+                text-align:center;
             }
             h5 {
-            font-size: 1.3em;
+                font-size: 1.3em;
             }
             h6 {
-            font-size: 1.2em;
+                font-size: 1.2em;
             }
             .photo-header {
-            position: relative;
-            margin: 0 auto;
-            margin-bottom: -50px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: ${colors[data].headerBackground};
-            color: ${colors[data].headerColor};
-            padding: 10px;
-            width: 95%;
-            border-radius: 6px;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: -50px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                background-color: ${colors[data].headerBackground};
+                color: ${colors[data].headerColor};
+                padding: 10px;
+                width: 95%;
+                border-radius: 6px;
             }
             .photo-header > img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: -75px;
-            border: 6px solid ${colors[data].photoBorderColor};
-            box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-top: -75px;
+                border: 6px solid ${colors[data].photoBorderColor};
+                box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
             }
             .photo-header h1, .photo-header h2 {
-            width: 100%;
-            text-align: center;
+                width: 100%;
+                text-align: center;
             }
             .photo-header h1 {
-            margin-top: 10px;
+                margin-top: 10px;
             }
             .links-nav {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1.1em;
-            display: flex;
-            justify-content: center;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 1.1em;
+                display: flex;
+                justify-content: center;
             }
             .links-nav div {
-            padding: 0 5px;
+                padding: 0 5px;
             }
             .links-nav div a {
-            padding: 0 5px;
+                padding: 0 5px;
             }
             .nav-link {
-            display: inline-block;
-            margin: 5px 10px;
+                display: inline-block;
+                margin: 5px 10px;
             }
             .workExp-date {
-            font-style: italic;
-            font-size: .7em;
-            text-align: right;
-            margin-top: 10px;
+                font-style: italic;
+                font-size: .7em;
+                text-align: right;
+                margin-top: 10px;
             }
             .container {
-            padding: 50px;
-            padding-left: 100px;
-            padding-right: 100px;
+                padding: 50px;
+                padding-left: 100px;
+                padding-right: 100px;
             }
             .row {
                 display: flex;
@@ -166,21 +166,21 @@ function generatePdfContent(data, gitHubInfo) {
             }
             
             .col {
-            flex: 1;
-            text-align: center;
+                flex: 1;
+                text-align: center;
             }
             .col h2 {
-            margin-top:40px;
+                margin-top:40px;
             }
             a, a:hover {
-            text-decoration: none;
-            color: inherit;
-            font-weight: bold;
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
             }
             @media print { 
-            body { 
-                zoom: .75; 
-            } 
+                body { 
+                    zoom: .75; 
+                } 
             }
         </style>
     </head>
@@ -189,37 +189,39 @@ function generatePdfContent(data, gitHubInfo) {
             <div class="photo-header">
                 <img src="${gitHubInfo.avatar_url}" alt="${gitHubInfo.name}">
                 <h1>My name is ${gitHubInfo.name}</h1>
+                <h4>Currently @ ${gitHubInfo.company}</h4>
             
                 <div class="links-nav">
-                <div><i class="fas fa-map-marker"></i><a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a> </div>
-                <div><i class="fab fa-github"></i><a href="${gitHubInfo.html_url}">GitHub</a> </div>
-                <div><i class="fab fa-blogger-b"></i><a href="${gitHubInfo.blog}">Blog</a> </div>        
+                    <div><i class="fas fa-map-marker"></i><a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a> </div>
+                    <div><i class="fab fa-github"></i><a href="${gitHubInfo.html_url}">GitHub</a> </div>
+                    <div><i class="fab fa-blogger-b"></i><a href="${gitHubInfo.blog}">Blog</a> </div>        
                 
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                <h2>${gitHubInfo.bio}</h2>
+                    <h2>${gitHubInfo.bio}</h2>
+
                 </div>
             </div>
             
             <main class="row">
-            <div class="card">
-                <h3>Public Repositories</h3>
-                <h4>${gitHubInfo.public_repos}</h4>
-            </div>
-            <div class="card">
-                <h3>Followers</h3>
-                <h4>${gitHubInfo.followers}</h4>
-            </div>
-            <div class="card">
-                <h3>GitHub Stars</h3>
-                <h4>${gitHubInfo.starred}</h4>
-            </div>
-            <div class="card">
-                <h3>Following</h3>
-                <h4>${gitHubInfo.following}</h4>
-            </div>
+                <div class="card">
+                    <h3>Public Repositories</h3>
+                    <h4>${gitHubInfo.public_repos}</h4>
+                </div>
+                <div class="card">
+                    <h3>Followers</h3>
+                    <h4>${gitHubInfo.followers}</h4>
+                </div>
+                <div class="card">
+                    <h3>GitHub Stars</h3>
+                    <h4>${gitHubInfo.starred}</h4>
+                </div>
+                <div class="card">
+                    <h3>Following</h3>
+                    <h4>${gitHubInfo.following}</h4>
+                </div>
             </main>
             
         </section>

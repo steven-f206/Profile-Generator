@@ -13,7 +13,8 @@ async function gitHubProfile(answers, createPdf){
         blog: response1.data.blog,
         location: response1.data.location,
         public_repos: response1.data.public_repos,
-        avatar_url: response1.data.avatar_url
+        avatar_url: response1.data.avatar_url,
+        company: response1.data.company
     } 
     const response2 = await axios('https://api.github.com/users/steven-f206/starred');
     gitHubInfo.starred = Object.keys(response2.data).length;
