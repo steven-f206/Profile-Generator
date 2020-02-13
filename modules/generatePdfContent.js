@@ -63,7 +63,6 @@ function generatePdfContent(data, gitHubInfo) {
             font-family: 'Cabin', sans-serif;
             }
             main {
-            background-color: #E9EDEE;
             height: auto;
             padding-top: 30px;
             }
@@ -152,9 +151,10 @@ function generatePdfContent(data, gitHubInfo) {
             .row {
                 display: flex;
                 flex-wrap: wrap;
+                background-color: #E9EDEE;
                 justify-content: space-between;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
             .card {
                 padding: 20px;
