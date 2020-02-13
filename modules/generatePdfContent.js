@@ -125,6 +125,14 @@ function generatePdfContent(data, gitHubInfo) {
             text-align: center;
             padding: 20px 0;
             font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            }
+            .links-nav div {
+            padding: 0 5px;
+            }
+            .links-nav div a {
+            padding: 0 5px;
             }
             .nav-link {
             display: inline-block;
@@ -183,10 +191,9 @@ function generatePdfContent(data, gitHubInfo) {
         <h1>My name is ${gitHubInfo.name}</h1>
         
         <div class="links-nav">
-            <a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a>
-            <a href="${gitHubInfo.html_url}">GitHub</a>
-            <a href="${gitHubInfo.blog}">Blog</a>
-        </div>
+        <div><i class="fas fa-map-marker"></i><a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a> </div>
+        <div><i class="fab fa-github"></i><a href="${gitHubInfo.html_url}">GitHub</a> </div>
+        <div><i class="fab fa-blogger-b"></i><a href="${gitHubInfo.blog}">Blog</a> </div>        </div>
         </div>
         <div class="row">
             <div class="col">

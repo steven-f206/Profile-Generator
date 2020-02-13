@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const generatePdfContent = require('./generatePdfContent.js').generatePdfContent;
+const generatePdfContent = require('./generatePdfContent').generatePdfContent;
 
 // Step 4. Intructions to create PDF below utilizing the node puppeteer library
 const createPdf = async (answers, gitHubInfo) => {
@@ -11,6 +11,7 @@ const createPdf = async (answers, gitHubInfo) => {
 };
   // Awaits content from the generatePdfContent
   await page.setContent(generatePdfContent(answers.color, gitHubInfo ));
+  await page.screenshot({ path: 'screenshot/output.png' });
   await page.pdf(options);
   await browser.close();
 }
