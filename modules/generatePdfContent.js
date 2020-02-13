@@ -185,42 +185,44 @@ function generatePdfContent(data, gitHubInfo) {
         </style>
     </head>
     <body>
-    <section class="wrapper">
-        <div class="photo-header">
-        <img src="https://avatars0.githubusercontent.com/u/57821462?s=460&v=4" alt="Steven Ferreira portrait">
-        <h1>My name is ${gitHubInfo.name}</h1>
-        
-        <div class="links-nav">
-        <div><i class="fas fa-map-marker"></i><a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a> </div>
-        <div><i class="fab fa-github"></i><a href="${gitHubInfo.html_url}">GitHub</a> </div>
-        <div><i class="fab fa-blogger-b"></i><a href="${gitHubInfo.blog}">Blog</a> </div>        </div>
-        </div>
-        <div class="row">
-            <div class="col">
-            <h2>${gitHubInfo.bio}</h2>
+        <section class="wrapper">
+            <div class="photo-header">
+                <img src="${gitHubInfo.avatar_url}" alt="${gitHubInfo.name}">
+                <h1>My name is ${gitHubInfo.name}</h1>
+            
+                <div class="links-nav">
+                <div><i class="fas fa-map-marker"></i><a href="https://www.google.com/maps/place/${gitHubInfo.location}">Location</a> </div>
+                <div><i class="fab fa-github"></i><a href="${gitHubInfo.html_url}">GitHub</a> </div>
+                <div><i class="fab fa-blogger-b"></i><a href="${gitHubInfo.blog}">Blog</a> </div>        
+                
+                </div>
             </div>
-        </div>
-        
-        <main class="row">
-        <div class="card">
-            <h3>Public Repositories</h3>
-            <h4>${gitHubInfo.public_repos}</h4>
-        </div>
-        <div class="card">
-            <h3>Followers</h3>
-            <h4>${gitHubInfo.followers}</h4>
-        </div>
-        <div class="card">
-            <h3>GitHub Stars</h3>
-            <h4>${gitHubInfo.starred}</h4>
-        </div>
-        <div class="card">
-            <h3>Following</h3>
-            <h4>${gitHubInfo.following}</h4>
-        </div>
-        </main>
-        
-    </section>
+            <div class="row">
+                <div class="col">
+                <h2>${gitHubInfo.bio}</h2>
+                </div>
+            </div>
+            
+            <main class="row">
+            <div class="card">
+                <h3>Public Repositories</h3>
+                <h4>${gitHubInfo.public_repos}</h4>
+            </div>
+            <div class="card">
+                <h3>Followers</h3>
+                <h4>${gitHubInfo.followers}</h4>
+            </div>
+            <div class="card">
+                <h3>GitHub Stars</h3>
+                <h4>${gitHubInfo.starred}</h4>
+            </div>
+            <div class="card">
+                <h3>Following</h3>
+                <h4>${gitHubInfo.following}</h4>
+            </div>
+            </main>
+            
+        </section>
    
     </body>
     </html>`
