@@ -21,7 +21,7 @@
     },
     "homepage": "https://github.com/steven-f206/Profile-Generator#readme",
     "dependencies": {
-        "axios": "^0.19.0",
+        "axios": "^0.21.1",
         "fs-extra": "^8.1.0",
         "inquirer": "^7.0.0",
         "puppeteer": "^2.0.0"
